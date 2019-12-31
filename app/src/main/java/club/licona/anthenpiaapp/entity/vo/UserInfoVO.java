@@ -3,7 +3,6 @@ package club.licona.anthenpiaapp.entity.vo;
 /**
  * @author licona
  */
-
 public class UserInfoVO {
 
     private Integer id;
@@ -12,9 +11,6 @@ public class UserInfoVO {
     private String nickname;
     private String email;
     private String token;
-
-    public UserInfoVO() {
-    }
 
     public Integer getId() {
         return id;
@@ -44,8 +40,8 @@ public class UserInfoVO {
         return nickname;
     }
 
-    public void setNickname(String name) {
-        this.nickname = name;
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
     public String getEmail() {
@@ -70,7 +66,7 @@ public class UserInfoVO {
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", name='" + nickname + '\'' +
+                ", nickname='" + nickname + '\'' +
                 ", email='" + email + '\'' +
                 ", token='" + token + '\'' +
                 '}';

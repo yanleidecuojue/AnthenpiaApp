@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+        android:id="@+id/swipeToLoadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="11">
+
+        <include
+            android:id="@+id/swipe_refresh_header"
+            layout="@layout/layout_comment_header" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/swipe_target"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+                <club.licona.anthenpiaapp.activity.view.CommentExpandableListView
+                    android:id="@+id/comment_expandable_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null"
+                    android:listSelector="@android:color/transparent"
+                    android:scrollbars="none" />
+
+        </androidx.core.widget.NestedScrollView>
+    </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/tv_give_comment"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_weight="1"
+            android:background="@drawable/bt_comment_selector"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_18"
+            android:text="说点什么吧..."
+            android:textSize="@dimen/sp_12" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:src="@drawable/ic_blog_laud" />
+
+        <TextView
+            android:id="@+id/tv_comment_laud_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="0"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:src="@drawable/ic_blog_comment" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_12"
+            android:text="0"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+</LinearLayout>

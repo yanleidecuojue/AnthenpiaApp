@@ -1,64 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
 
     <include
         android:id="@+id/rl_bar"
         layout="@layout/view_main_bar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_40"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="@dimen/dp_45"/>
 
-    <FrameLayout
-        android:id="@+id/fl_container"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/ll_container"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rl_bar">
-
-    </FrameLayout>
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="1"/>
 
     <LinearLayout
-        android:id="@+id/ll_container"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/dp_50"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageView
-            android:id="@+id/iv_occupation"
-            android:layout_width="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/ll_occupation"
+            android:layout_width="@dimen/dp_0"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_main_occupation" />
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/iv_occupation"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_35"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/ic_main_occupation"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:id="@+id/tv_occupation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/occupation"/>
+        </LinearLayout>
 
-        <ImageView
-            android:id="@+id/iv_tools"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/ll_tools"
+            android:layout_width="@dimen/dp_0"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_main_tools" />
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/iv_tools"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_35"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/ic_main_tools"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:id="@+id/tv_tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tools"/>
+        </LinearLayout>
 
-        <ImageView
-            android:id="@+id/iv_blog"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/ll_blog"
+            android:layout_width="@dimen/dp_0"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_main_blog" />
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/iv_blog"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_35"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/ic_main_blog"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:id="@+id/tv_blog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/blog"/>
+        </LinearLayout>
 
-        <ImageView
-            android:id="@+id/iv_my"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/ll_my"
+            android:layout_width="@dimen/dp_0"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_main_my" />
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/iv_my"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_35"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/ic_main_my"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:id="@+id/tv_my"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/my"/>
+        </LinearLayout>
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

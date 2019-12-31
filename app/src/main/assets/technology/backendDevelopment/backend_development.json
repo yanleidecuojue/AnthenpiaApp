@@ -1,0 +1,108 @@
+{
+  "backend_development": [
+    {
+      "name": "Java",
+      "desc": "Java是一门面向对象编程语言",
+      "header": "java.png"
+    },
+    {
+      "name": "Python",
+      "desc": "Python是一种跨平台的计算机程序设计语言",
+      "header": "python.png"
+    },
+    {
+      "name": "PHP",
+      "desc": "PHP即“超文本预处理器”，是一种通用开源脚本语言。",
+      "header": "php.png"
+    },
+    {
+      "name": ".NET",
+      "desc": ".NET是Microsoft XML Web services平台。",
+      "header": "dot_net.png"
+    },
+    {
+      "name": "C#",
+      "desc": "C#是微软公司发布的一种面向对象的、运行于.NET Framework和.NET Core(完全开源，跨平台)之上的高级程序设计语言。",
+      "header": "c_sharp.png"
+    },
+    {
+      "name": "C++",
+      "desc": "C++是C语言的继承，它既可以进行C语言的过程化程序设计，又可以进行以抽象数据类型为特点的基于对象的程序设计。",
+      "header": "cplusplus.png"
+    },
+    {
+      "name": "C",
+      "desc": "C语言是一门面向过程、抽象化的通用程序设计语言，广泛应用于底层开发。",
+      "header": "c.png"
+    },
+    {
+      "name": "VB",
+      "desc": "Visual Basic（简称VB）是Microsoft公司开发的一种通用的基于对象的程序设计语言。",
+      "header": "vb.png"
+    },
+    {
+      "name": "Delphi",
+      "desc": "Windows平台下著名的快速应用程序开发工具(Rapid Application Development，简称RAD)。",
+      "header": "delphi.png"
+    },
+    {
+      "name": "Perl",
+      "desc": "Perl，一种功能丰富的计算机程序语言，运行在超过100种计算机平台上，适用广泛。",
+      "header": "perl.png"
+    },
+    {
+      "name": "Ruby",
+      "desc": "Ruby，一种简单快捷的面向对象（面向对象程序设计）脚本语言。",
+      "header": "ruby.png"
+    },
+    {
+      "name": "Hadoop",
+      "desc": "Hadoop是一个由Apache基金会所开发的分布式系统基础架构。",
+      "header": "hadoop.png"
+    },
+    {
+      "name": "Node.js",
+      "desc": "Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。 Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型。",
+      "header": "node_js.png"
+    },
+    {
+      "name": "数据挖掘",
+      "desc": "数据挖掘是指从大量的数据中通过算法搜索隐藏于其中信息的过程。",
+      "header": "data_mining.png"
+    },
+    {
+      "name": "自然语言处理",
+      "desc": "自然语言处理研究能实现人与计算机之间用自然语言进行有效通信的各种理论和方法。",
+      "header": "nlp.png"
+    },
+    {
+      "name": "搜索算法",
+      "desc": "搜索算法是利用计算机的高性能来有目的的穷举一个问题解空间的部分或所有的可能情况，从而求出问题的解的一种方法。",
+      "header": "search_algorithm.png"
+    },
+    {
+      "name": "精准推荐",
+      "desc": "推荐算法学习",
+      "header": "precise_ recommendation.png"
+    },
+    {
+      "name": "全栈工程师",
+      "desc": "全栈工程师是指掌握多种技能，并能利用多种技能独立完成产品的人。",
+      "header": "full_stack_developer.png"
+    },   {
+      "name": "Go",
+      "desc": "Go（又称Golang）是Google的 Robert Griesemer，Rob Pike 及Ken Thompson开发的一种静态强类型、编译型语言。",
+      "header": "go.png"
+    },
+    {
+      "name": "ASP",
+      "desc": "ASP即Active Server Pages，是Microsoft公司开发的服务器端脚本环境，可用来创建动态交互式网页并建立强大的web应用程序。",
+      "header": "asp.png"
+    },
+    {
+      "name": "Shell",
+      "desc": "在计算机科学中，Shell俗称壳（用来区别于核），是指“为使用者提供操作界面”的软件（命令解析器）。",
+      "header": "shell.png"
+    }
+  ]
+}

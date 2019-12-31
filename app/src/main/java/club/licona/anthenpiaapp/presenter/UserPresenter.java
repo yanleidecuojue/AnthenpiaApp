@@ -51,11 +51,15 @@ public class UserPresenter {
                         String username = responseVo.getData().getUsername();
                         String token = responseVo.getData().getToken();
                         int userId = responseVo.getData().getId();
+                        String nickname = responseVo.getData().getNickname();
+                        String email = responseVo.getData().getEmail();
 
                         MMKV mmkv = MMKV.defaultMMKV();
                         mmkv.encode("username", username);
                         mmkv.encode("token", token);
                         mmkv.encode("userId", userId);
+                        mmkv.encode("nickname", nickname);
+                        mmkv.encode("email", email);
                     }
                 });
     }

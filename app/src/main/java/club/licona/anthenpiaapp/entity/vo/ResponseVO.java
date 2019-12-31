@@ -3,7 +3,6 @@ package club.licona.anthenpiaapp.entity.vo;
 /**
  * @author licona
  */
-
 public class ResponseVO<T> {
 
     private Integer code;

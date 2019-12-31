@@ -1,3 +1,39 @@
 <resources>
     <string name="app_name">AnthenpiaApp</string>
+    <!-- activity_login -->
+    <string name="username">请输入用户名</string>
+    <string name="password">请输入密码</string>
+    <string name="click_login">登 录</string>
+    <string name="register">立即注册</string>
+    <string name="find_psw">找回密码？</string>
+    <!-- activity_register -->
+    <string name="password_again">请再次输入密码</string>
+    <string name="nickname">请输入昵称(可选)</string>
+    <string name="email">请输入邮箱地址(可选)</string>
+    <!-- activity_main -->
+    <string name="occupation">职业</string>
+    <string name="tools">工具</string>
+    <string name="blog">博客</string>
+    <string name="my">我的</string>
+    <!-- activity_main_occupation -->
+    <string name="technology">技 术</string>
+    <!-- activity_technology -->
+    <string name="backend_development">后端开发</string>
+    <string name="mobile_development">移动开发</string>
+    <string name="frontend_development">前端开发</string>
+    <string name="test">测试</string>
+    <string name="operation_maintenance">运维</string>
+    <string name="dba">DBA</string>
+    <string name="senior_jobs">高端职位</string>
+    <string name="project_management">项目管理</string>
+    <string name="hardware_development">硬件开发</string>
+    <string name="enterprise_software">企业软件</string>
+    <!-- activity_main_my -->
+    <string name="login">点击登录</string>
+    <string name="settings">设置</string>
+    <!-- activity_header -->
+    <string name="select_image_text">选择图片</string>
+    <string name="btn_change_header">确认更换</string>
+
+
 </resources>

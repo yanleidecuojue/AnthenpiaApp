@@ -1,26 +1,26 @@
 package club.licona.anthenpiaapp.activity;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.tencent.mmkv.MMKV;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import club.licona.anthenpiaapp.R;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
-
 /**
  * @author licona
  */
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends BaseActivity {
 
     private Unbinder unbinder;
     @BindView(R.id.tv_version)
@@ -29,6 +29,8 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_splash);
 
         this.unbinder = ButterKnife.bind(this);
@@ -45,16 +47,28 @@ public class SplashActivity extends AppCompatActivity {
             tvVersion.setText("Version");
         }
 
-        Timer timer = new Timer();
-        TimerTask task = new TimerTask() {
+        /**
+         * 统一地去获取权限
+         */
+        performCodeWithPermission("读写sd卡，调用相机", new PermissionCallback() {
             @Override
-            public void run() {
-                Intent intent = new Intent(SplashActivity.this,MainActivity.class);
-                startActivity(intent);
-                SplashActivity.this.finish();
+            public void hasPermission() {
+                MMKV mmkv = MMKV.defaultMMKV();
+                if(mmkv.decodeString("username") == null){
+                    new Handler().postDelayed(() ->
+                            startActivity(new Intent(SplashActivity.this, LoginActivity.class)), 1500);
+                } else {
+                    new Handler().postDelayed(() ->
+                            startActivity(new Intent(SplashActivity.this, MainActivity.class)), 1500);
+                }
+
             }
-        };
-        timer.schedule(task, 1500);
+
+            @Override
+            public void noPermission() {
+                finish();
+            }
+        }, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA);
     }
 
     @Override

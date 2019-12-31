@@ -14,6 +14,7 @@ import com.jakewharton.rxbinding3.view.RxView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
 import club.licona.anthenpiaapp.R;
 import club.licona.anthenpiaapp.entity.vo.UserRegisterVO;
@@ -24,6 +25,9 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 
+/**
+ * @author licona
+ */
 public class RegisterActivity extends AppCompatActivity {
 
     private UserPresenter userPresenter;
@@ -106,6 +110,11 @@ public class RegisterActivity extends AppCompatActivity {
                         }
                 );
         compositeDisposable.add(disposable);
+    }
+
+    @OnClick(R.id.tv_back)
+    void back() {
+        finish();
     }
 
     @Override

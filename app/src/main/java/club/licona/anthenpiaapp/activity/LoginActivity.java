@@ -5,13 +5,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.jakewharton.rxbinding3.view.RxView;
+import com.tencent.mmkv.MMKV;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -34,13 +34,10 @@ public class LoginActivity extends AppCompatActivity {
     private UserPresenter userPresenter;
 
     private Unbinder unbinder;
-    @BindView(R.id.tv_back)
-    TextView tvBack;
+
     @BindView(R.id.tv_title)
     TextView tvTitle;
 
-    @BindView(R.id.iv_head)
-    ImageView ivHead;
     @BindView(R.id.et_username)
     EditText etUsername;
     @BindView(R.id.et_password)
@@ -101,7 +98,9 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(this, responseVO.getMsg(), Toast.LENGTH_SHORT).show();
                                 tvResult.setText(responseVO.getData().toString());
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                intent.putExtra("username", responseVO.getData().getUsername());
+                                MMKV mmkv = MMKV.defaultMMKV();
+                                mmkv.encode("isLogin", true);
+                                mmkv.encode("username", responseVO.getData().getUsername());
                                 startActivity(intent);
                             } else {
                                 tvResult.setText(responseVO.getMsg());
@@ -113,6 +112,11 @@ public class LoginActivity extends AppCompatActivity {
                         }
                 );
         compositeDisposable.add(disposable);
+    }
+
+    @OnClick(R.id.tv_back)
+    void back() {
+        finish();
     }
 
     @OnClick(R.id.tv_register)

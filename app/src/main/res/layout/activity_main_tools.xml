@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_tools_ocr"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_10"
+            app:srcCompat="@drawable/bg_tools_ocr" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_55"
+                android:gravity="center"
+                android:text="图像文字识别"
+                android:textSize="@dimen/sp_20" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_25"
+                android:gravity="center"
+                android:text="基于百度API实现图像文字识别" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        android:background="@color/gray"/>
+</LinearLayout>

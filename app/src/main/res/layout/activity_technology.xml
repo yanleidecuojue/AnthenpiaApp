@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/rl_bar"
+        layout="@layout/view_main_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_backend_development"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/bg_technology_backend_development" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:letterSpacing="0.5"
+                        android:text="@string/backend_development"
+                        android:textSize="@dimen/sp_20" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_mobile_development"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/bg_technology_mobile_development" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:letterSpacing="0.5"
+                        android:text="@string/mobile_development"
+                        android:textSize="@dimen/sp_20" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_frontend_development"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/bg_technology_frontend_development" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:letterSpacing="0.5"
+                        android:text="@string/frontend_development"
+                        android:textSize="@dimen/sp_20" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_test"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/bg_technology_test" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:letterSpacing="0.5"
+                        android:text="@string/test"
+                        android:textSize="@dimen/sp_20" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_operation_maintenance"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/bg_technology_operation_maintenance" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:letterSpacing="0.5"
+                        android:text="@string/operation_maintenance"
+                        android:textSize="@dimen/sp_20" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_dba"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/bg_technology_dba" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:letterSpacing="0.5"
+                        android:text="@string/dba"
+                        android:textSize="@dimen/sp_20" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_senior_jobs"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/bg_technology_senior_jobs" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:letterSpacing="0.5"
+                        android:text="@string/senior_jobs"
+                        android:textSize="@dimen/sp_20" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_project_management"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/bg_technology_project_management" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:letterSpacing="0.5"
+                        android:text="@string/project_management"
+                        android:textSize="@dimen/sp_20" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_hardware_development"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/bg_technology_hardware_development" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:letterSpacing="0.5"
+                        android:text="@string/hardware_development"
+                        android:textSize="@dimen/sp_20" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_enterprise_software"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/bg_technology_enterprise_software" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:letterSpacing="0.5"
+                        android:text="@string/enterprise_software"
+                        android:textSize="@dimen/sp_20" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

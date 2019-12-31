@@ -30,7 +30,7 @@ import cn.hutool.core.date.DateUtil;
 
 public class BaseApplication extends Application implements Thread.UncaughtExceptionHandler {
 
-    private static final String BASE_DIR = "/me.licona.anthenpiaapp/";
+    private static final String BASE_DIR = "/club.licona.anthenpiaapp/";
 
     @Override
     public void onCreate() {

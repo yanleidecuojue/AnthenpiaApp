@@ -12,9 +12,7 @@ import io.reactivex.schedulers.Schedulers;
 /**
  * @author licona
  */
-
 public class UserService {
-
     /**
      * 登陆
      * <p>
@@ -43,4 +41,6 @@ public class UserService {
                         userRegisterVO.getNickname(), userRegisterVO.getEmail())
                 .subscribeOn(Schedulers.io());
     }
+
+
 }
